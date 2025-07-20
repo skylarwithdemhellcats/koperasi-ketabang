@@ -1,5 +1,4 @@
 <?php
-// app/Http/Middleware/RoleMiddleware.php
 
 namespace App\Http\Middleware;
 
@@ -7,15 +6,10 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class RoleMiddleware
+class CheckRole
 {
     /**
      * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @param  string  $role
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next, $role)
     {
@@ -26,9 +20,11 @@ class RoleMiddleware
 
         $user = Auth::user();
 
-        // Check if user has the required role
-        if ($user->role !== $role) {
-            // For other cases, show 403
+        // Debug: uncomment untuk debug
+        // dd('User Role: "' . $user->role . '" | Required: "' . $role . '"');
+
+        // Check role (case insensitive)
+        if (strtolower($user->role) !== strtolower($role)) {
             abort(403, 'Unauthorized access');
         }
 

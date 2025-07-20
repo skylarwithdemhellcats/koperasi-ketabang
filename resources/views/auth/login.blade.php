@@ -110,7 +110,9 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100 py-2 mb-3">Login</button>
-
+                <div class="text-center mt-2">
+                    <small class="text-muted">Belum punya akun? <a href="{{ route('register') }}">Daftar di sini</a></small>
+                </div>
 
             </form>
         </div>

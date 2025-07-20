@@ -12,13 +12,15 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
+            // Custom role middleware untuk sistem role sederhana
+            'role' => \App\Http\Middleware\CheckRole::class,
+
+            // Spatie middleware (jika nanti mau upgrade ke full spatie system)
+            'spatie.role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
             'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
             'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
         ]);
-
     })
-
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();

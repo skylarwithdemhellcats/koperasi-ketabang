@@ -9,6 +9,11 @@ use App\Http\Controllers\AkunController;
 use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SaldoAwalController;
+use App\Http\Controllers\SimpananUserController;
+use App\Http\Controllers\PinjamanUserController;
+use App\Http\Controllers\PenarikanUserController;
+
+use App\Http\Controllers\AnggotaDashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,6 +31,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
 
     // ========== ROUTES UNTUK SEMUA USER (ADMIN & ANGGOTA) ==========
+
 
     // Home - accessible by all authenticated users
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -151,6 +157,39 @@ Route::middleware('auth')->group(function () {
         Route::post('update-role', [RoleAndPermissionController::class, 'updateRole']);
         Route::get('delete-role/{id}', [RoleAndPermissionController::class, 'delete']);
     });
+
+    // ========== ROUTES KHUSUS ANGGOTA ONLY ==========
+    Route::middleware(['role:anggota'])->group(function () {
+
+        // Dashboard Anggota
+        Route::get('/anggota/dashboard', [AnggotaDashboardController::class, 'index'])->name('anggota.dashboard');
+
+        // Simpanan Routes untuk Anggota
+        Route::prefix('anggota/simpanan')->name('anggota.simpanan.')->group(function () {
+            Route::get('/', [SimpananUserController::class, 'index'])->name('index');
+            Route::get('/create', [SimpananUserController::class, 'create'])->name('create');
+            Route::get('/main', [SimpananUserController::class, 'main'])->name('main');
+            Route::get('/show', [SimpananUserController::class, 'show'])->name('show');
+        });
+
+        // Pinjaman Routes untuk Anggota
+        Route::prefix('anggota/pinjaman')->name('anggota.pinjaman.')->group(function () {
+            Route::get('/', [PinjamanUserController::class, 'index'])->name('index');
+            Route::get('/create', [PinjamanUserController::class, 'create'])->name('create');
+            Route::get('/main', [PinjamanUserController::class, 'main'])->name('main');
+            Route::get('/show', [PinjamanUserController::class, 'show'])->name('show');
+        });
+
+        // Penarikan Routes untuk Anggota
+        Route::prefix('anggota/penarikan')->name('anggota.penarikan.')->group(function () {
+            Route::get('/', [PenarikanUserController::class, 'index'])->name('index');
+            Route::get('/create', [PenarikanUserController::class, 'create'])->name('create');
+            Route::get('/main', [PenarikanUserController::class, 'main'])->name('main');
+            Route::get('/show', [PenarikanUserController::class, 'show'])->name('show');
+        });
+
+    });
+
 });
 
 Auth::routes();
