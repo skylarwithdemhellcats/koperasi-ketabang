@@ -59,7 +59,7 @@
         <section class="py-16 flex-grow">
             <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
                 <!-- Simpanan -->
-                <a href="{{ route('simpanan.index') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+                <a href="{{ route('anggota.simpanan.index') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
                     <div class="flex items-center gap-4 mb-2">
                         <i class="fas fa-money-bill-wave bg-white text-gray-800 rounded-full p-3 shadow"></i>
                         <h3 class="text-xl font-semibold text-black">Simpanan</h3>
@@ -68,7 +68,7 @@
                 </a>
 
                 <!-- Pinjaman -->
-                <a href="{{ route('pinjaman.index') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+                <a href="{{ route('anggota.pinjaman.index') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
                     <div class="flex items-center gap-4 mb-2">
                         <i class="fas fa-hand-holding-usd bg-white text-gray-800 rounded-full p-3 shadow"></i>
                         <h3 class="text-xl font-semibold text-black">Pinjaman</h3>
@@ -77,7 +77,7 @@
                 </a>
 
                 <!-- Penarikan -->
-                <a href="{{ route('penarikan.index') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+                <a href="{{ route('anggota.penarikan.index') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
                     <div class="flex items-center gap-4 mb-2">
                         <i class="fas fa-cash-register bg-white text-gray-800 rounded-full p-3 shadow"></i>
                         <h3 class="text-xl font-semibold text-black">Penarikan</h3>

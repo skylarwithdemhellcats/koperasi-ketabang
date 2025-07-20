@@ -25,7 +25,7 @@
             </a>
 
             <!-- Lihat Simpanan -->
-            <a href="{{ route('simpanan.main') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+            <a href="{{ route('anggota.simpanan.main') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
                 <div class="flex items-center gap-4 mb-2">
                     <i class="fas fa-clipboard-list bg-white text-gray-800 rounded-full p-3 shadow"></i>
                     <h3 class="text-xl font-semibold text-black">Lihat Simpanan</h3>
@@ -36,7 +36,7 @@
     </section>
 
     <div class="text-center mt-12">
-        <a href="{{ route('welcome') }}" class="inline-block bg-white px-6 py-3 text-sm font-medium text-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition duration-300">
+        <a href="{{ route('anggota.dashboard') }}" class="inline-block bg-white px-6 py-3 text-sm font-medium text-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition duration-300">
             <i class="fas fa-arrow-left mr-2"></i> Kembali ke Halaman Utama
         </a>
     </div>

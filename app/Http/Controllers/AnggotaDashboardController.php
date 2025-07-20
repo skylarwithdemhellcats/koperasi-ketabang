@@ -26,8 +26,6 @@ class AnggotaDashboardController extends Controller
     {
         $user = Auth::user();
 
-        // Debug: Periksa role user (hapus setelah debug)
-        dd('User authenticated: ' . $user->name . ' | Role: "' . $user->role . '"');
 
         return view('anggota.dashboard');
     }

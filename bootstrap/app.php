@@ -13,7 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             // Custom role middleware untuk sistem role sederhana
-            'role' => \App\Http\Middleware\CheckRole::class,
+            'role' => \App\Http\Middleware\RoleMiddleware::class,
 
             // Spatie middleware (jika nanti mau upgrade ke full spatie system)
             'spatie.role' => \Spatie\Permission\Middleware\RoleMiddleware::class,

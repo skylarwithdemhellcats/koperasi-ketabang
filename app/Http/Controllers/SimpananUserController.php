@@ -8,21 +8,21 @@ class SimpananUserController extends Controller
 {
     public function index()
     {
-        return view('simpanan_user.index'); // Lihat Simpanan
+        return view('anggota.anggota_simpanan.index'); // Lihat Simpanan
     }
 
     public function create()
     {
-        return view('simpanan_user.create');
+        return view('anggota.anggota_simpanan.create');
     }
 
     public function main()
     {
-        return view('simpanan_user.main');
+        return view('anggota.anggota_simpanan.main');
     }
 
     public function show()
     {
-        return view('simpanan_user.show');
+        return view('anggota.anggota_simpanan.show');
     }
 }
