@@ -1,41 +1,44 @@
-@extends('layouts.nasabah')
+@extends('layouts.anggota')
 
 @section('content')
-<div class="container">
-    <h2 class="mb-4">Form Pengajuan Penarikan Simpanan</h2>
-
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-
-    <form action="{{ route('anggota.penarikan.store') }}" method="POST">
-        @csrf
-
-        <div class="mb-3">
-            <label for="jenis_simpanan" class="form-label">Jenis Simpanan</label>
-            <select name="jenis_simpanan" class="form-control" required>
-                <option value="">-- Pilih Jenis Simpanan --</option>
-                <option value="sukarela">Simpanan Sukarela</option>
-                <option value="insidental">Simpanan Insidental</option>
-            </select>
+    <!-- Header Section -->
+    <section class="pt-40 pb-12">
+        <div class="max-w-4xl mx-auto px-6 flex justify-center items-center">
+            <h1 class="text-4xl md:text-5xl font-semibold flex items-center gap-x-2 
+                    text-white drop-shadow-lg">
+                <i class="fas fa-wallet"></i>
+                Penarikan Dana
+            </h1>
         </div>
+    </section>
 
-        <div class="mb-3">
-            <label for="jumlah" class="form-label">Jumlah Penarikan</label>
-            <input type="number" name="jumlah" class="form-control" placeholder="Masukkan jumlah penarikan" required>
+    <!-- Penarikan Feature -->
+    <section class="py-16 flex-grow">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
+            <!-- Ajukan Penarikan -->
+            <a href="{{ route('anggota.penarikan.create') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+                <div class="flex items-center gap-4 mb-2">
+                    <i class="fas fa-money-bill-wave bg-white text-gray-800 rounded-full p-3 shadow"></i>
+                    <h3 class="text-xl font-semibold text-black">Ajukan Penarikan</h3>
+                </div>
+                <p class="text-gray-600">Tarik dana simpanan Anda dengan mudah dan aman.</p>
+            </a>
+
+            <!-- Lihat Riwayat Penarikan -->
+            <a href="{{ route('anggota.penarikan.main') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+                <div class="flex items-center gap-4 mb-2">
+                    <i class="fas fa-history bg-white text-gray-800 rounded-full p-3 shadow"></i>
+                    <h3 class="text-xl font-semibold text-black">Riwayat Penarikan</h3>
+                </div>
+                <p class="text-gray-600">Lihat riwayat pengajuan penarikan dana Anda.</p>
+            </a>
         </div>
+    </section>
 
-        <div class="mb-3">
-            <label for="tanggal" class="form-label">Tanggal Penarikan</label>
-            <input type="date" name="tanggal" class="form-control" value="{{ date('Y-m-d') }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="alasan" class="form-label">Alasan Penarikan</label>
-            <textarea name="alasan" class="form-control" rows="3" placeholder="Tuliskan alasan penarikan" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-danger">Ajukan Penarikan</button>
-    </form>
-</div>
+    <!-- Back to Main -->
+    <div class="text-center mt-12">
+        <a href="{{ route('anggota.dashboard') }}" class="inline-block bg-white px-6 py-3 text-sm font-medium text-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition duration-300">
+            <i class="fas fa-arrow-left mr-2"></i> Kembali ke Halaman Utama
+        </a>
+    </div>
 @endsection
