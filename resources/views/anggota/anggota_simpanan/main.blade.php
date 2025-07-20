@@ -43,7 +43,7 @@
                         <td class="px-4 py-2">Rp 1.000.000,00</td>
                         <td class="px-4 py-2">Simpanan Pokok</td>
                         <td class="px-4 py-2 flex gap-2">
-                            <a href="{{ route('simpanan.show') }}" class="text-blue-500 hover:text-blue-700" title="Show"><i class="fas fa-eye"></i></a>
+                            <a href="{{ route('anggota.simpanan.show') }}" class="text-blue-500 hover:text-blue-700" title="Show"><i class="fas fa-eye"></i></a>
                             {{-- <a href="{{ route('simpanan.show', $tabungan->simpanan_id) }}" class="text-blue-500 hover:text-blue-700" title="Show"><i class="fas fa-eye"></i></a> --}}
                         </td>
                     </tr>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="text-center mt-12">
-        <a href="{{ route('welcome') }}" class="inline-block bg-white px-6 py-3 text-sm font-medium text-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition duration-300">
+        <a href="{{ route('anggota.dashboard') }}" class="inline-block bg-white px-6 py-3 text-sm font-medium text-gray-800 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition duration-300">
             <i class="fas fa-arrow-left mr-2"></i> Kembali ke Halaman Utama
         </a>
     </div>
