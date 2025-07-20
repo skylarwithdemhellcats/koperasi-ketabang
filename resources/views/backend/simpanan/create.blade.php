@@ -38,7 +38,7 @@
                     <option value="">Pilih Jenis Simpanan</option>
                     @foreach($jenisSimpanan as $jenis)
                         <option value="{{ $jenis->id }}"
-                            {{ $simpanedit->id_jenis_simpanan == $jenis->id ? 'selected' : '' }}>
+                            {{-- {{ $simpanedit->id_jenis_simpanan == $jenis->id ? 'selected' : '' }}> --}}
                             {{ $jenis->nama }}
                         </option>
                     @endforeach

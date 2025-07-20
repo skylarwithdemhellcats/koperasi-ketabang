@@ -47,7 +47,7 @@
         </div>
 
         <div class="text-center">
-            <a href="{{ route('simpanan.index') }}" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition duration-200">Kembali</a>
+            <a href="{{ route('anggota.simpanan.index') }}" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition duration-200">Kembali</a>
         </div>
     </div>
 </div>
