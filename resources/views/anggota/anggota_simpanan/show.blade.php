@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- Assuming you're using a Tailwind-styled base layout --}}
+@extends('layouts.anggota')
 
 @section('title', 'Detail Simpanan')
 

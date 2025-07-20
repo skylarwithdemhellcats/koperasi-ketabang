@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
-<body class="font-sans bg-[#f4f4f4] text-[#333] flex flex-col min-h-screen bg-white/50" style="background-image: url('{{ asset('src/bg_new.jpg') }}'); background-size: cover; background-position: center;">
+<body class="font-sans bg-[#f4f4f4] text-[#333] flex flex-col min-h-screen bg-white/50" style="background-image: url('{{ asset('src/bg-ketabang.jpg') }}'); background-size: cover; background-position: center;">
 
     <!-- Header -->
     <header class="text-white sticky top-0 z-50">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.anggota')
 
 @section('content')
     <!-- Logo-only Content -->
@@ -16,7 +16,7 @@
     <section class="py-16 flex-grow">
         <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
             <!-- Setor Simpanan -->
-            <a href="{{ route('simpanan.create') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
+            <a href="{{ route('anggota.simpanan.create') }}" class="block !no-underline bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 hover:bg-gray-50">
                 <div class="flex items-center gap-4 mb-2">
                     <i class="fas fa-piggy-bank bg-white text-gray-800 rounded-full p-3 shadow"></i>
                     <h3 class="text-xl font-semibold text-black">Setor Simpanan</h3>

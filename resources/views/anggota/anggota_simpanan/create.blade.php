@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.anggota')
 
 @section('title', 'Tambah Simpanan')
 
@@ -57,7 +57,7 @@
 
         <div class="text-center grid grid-cols-2 gap-x-6">
             <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Submit</button>
-            <a href="{{ route('simpanan.index') }}" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition duration-200">Kembali</a>
+            <a href="{{ route('anggota.simpanan.index') }}" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition duration-200">Kembali</a>
         </div>
     </form>
 </div>
