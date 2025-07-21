@@ -1,4 +1,6 @@
 // import 'bootstrap';
+// Do not import 'bootstrap' JS here since it's already loaded via CDN in layout
+// Leave this file only for axios or other custom setup
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

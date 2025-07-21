@@ -4,10 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-// import './bootstrap';
-import _ from 'lodash';
-
-window._ = _;
+import './bootstrap';
 import { createApp } from 'vue';
 
 /**
